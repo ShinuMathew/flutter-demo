@@ -53,8 +53,9 @@ class RandomWordsState extends State<RandomWords> {
       final List<Widget> divided =
           ListTile.divideTiles(context: context, tiles: tiles).toList();
       return Scaffold(
-        appBar: AppBar(title: Text('Makolet Favorites')),
+        appBar: AppBar(title: Text('Insight Favorites')),
         body: ListView(children: divided),
+        bottomNavigationBar: BottomAppBar(color: Colors.green),
       );
     }));
   }
@@ -63,12 +64,13 @@ class RandomWordsState extends State<RandomWords> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Makolet', textAlign: TextAlign.center),
+        title: Text('Insight Home', textAlign: TextAlign.center),
         actions: <Widget>[
           IconButton(icon: Icon(Icons.list), onPressed: _pushSaved)
         ],
       ),
       body: _buildList(),
+      bottomNavigationBar: BottomAppBar(color: Colors.green),
     );
   }
 }
